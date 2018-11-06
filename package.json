@@ -1,0 +1,83 @@
+{
+    "name": "MobileUI",
+    "projectId": "",
+    "version": "2.0.0",
+    "description": "适用于移动端的vue组件库",
+    "author": {
+        "name": "bjzhongjingxue",
+        "email": "bjzhongjingxue@corp.netease.com"
+    },
+    "cdn": "//static.ws.126.net/163/activity",
+    "private": true,
+    "scripts": {
+        "dev": "webpack-dev-server --config build/webpack.dev.js",
+        "demo": "webpack --config build/webpack.demo.js",
+        "build": "webpack --config build/webpack.prod.js"
+    },
+    "dependencies": {
+        "arale-qrcode": "^3.0.5",
+        "babel-runtime": "^6.26.0",
+        "inobounce": "^0.1.6",
+        "normalize.css": "^8.0.0",
+        "vue": "^2.5.16",
+        "vue-router": "^3.0.1",
+        "vue-template-compiler": "^2.5.16"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^8.2.3",
+        "babel-loader": "^7.1.4",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-stage-2": "^6.24.1",
+        "child_process": "^1.0.2",
+        "clean-webpack-plugin": "^0.1.19",
+        "copy-webpack-plugin": "^4.5.1",
+        "css-loader": "^0.28.11",
+        "easeftp": "^2.0.39",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-friendly-formatter": "^4.0.1",
+        "eslint-loader": "^2.0.0",
+        "eslint-plugin-html": "^4.0.3",
+        "eslint-plugin-import": "^2.12.0",
+        "file-loader": "^1.1.11",
+        "fs": "^0.0.1-security",
+        "gulp": "^3.9.1",
+        "gulp-plumber": "^1.2.0",
+        "gulp-replace": "^1.0.0",
+        "gulp-tinypng-extended": "^1.5.0",
+        "html-webpack-inline-source-plugin": "^0.0.10",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.4.0",
+        "optimize-css-assets-webpack-plugin": "^4.0.2",
+        "postcss-import": "^12.0.1",
+        "postcss-loader": "^2.1.5",
+        "postcss-plugin-px2rem": "^0.7.0",
+        "postcss-preset-env": "^5.1.0",
+        "postcss-sprites": "^4.2.1",
+        "postcss-write-svg": "^3.0.1",
+        "precss": "^3.1.2",
+        "style-loader": "^0.21.0",
+        "uglify-js": "^3.4.0",
+        "uglifyjs-webpack-plugin": "^1.2.5",
+        "vue-loader": "^15.2.4",
+        "vue-style-loader": "^4.1.0",
+        "webpack": "^4.12.0",
+        "webpack-bundle-analyzer": "^2.13.1",
+        "webpack-cli": "^3.0.3",
+        "webpack-dev-server": "^3.1.4",
+        "webpack-merge": "^4.1.2",
+        "yargs": "^11.0.0"
+    },
+    "engines": {
+        "node": ">= 4.0.0",
+        "npm": ">= 3.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "iOS > 8",
+        "not ie <= 8"
+    ]
+}

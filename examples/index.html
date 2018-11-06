@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"
+          name="viewport">
+    <title>webpack4.x</title>
+    <meta name="keywords" content="网易,新闻客户端">
+    <meta name="description" content="">
+    <meta name="author" content="网易">
+    <meta name="copyright" content="网易版权所有">
+    <script>
+        // rem适配
+        !(function () {
+            var designWidth = 750
+            var designHeight = 1206
+            var rem = 100
+
+            function updateHtmlFontSize() {
+                var oHtml = document.getElementsByTagName('html')[0]
+                var width = oHtml.clientWidth
+                var height = oHtml.clientHeight
+                var clientWidth
+                if (width < height) {
+                    clientWidth = width
+                } else {
+                    clientWidth = designWidth / designHeight * height
+                }
+                document.documentElement.style.fontSize = 100 * clientWidth / designWidth + 'px'
+            }
+
+            document.addEventListener('DOMContentLoaded', updateHtmlFontSize, false)
+            window.addEventListener('resize', updateHtmlFontSize, false)
+        })()
+    </script>
+</head>
+<body>
+<div id="app">
+</div>
+</body>
+</html>
