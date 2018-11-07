@@ -1,8 +1,8 @@
 /**
  * Created by zhongjx on 2018/11/4.
  */
-import './styles/index'
 import MuiButton from './components/button/index'
+import './styles/index'
 
 const components = {
     MuiButton,

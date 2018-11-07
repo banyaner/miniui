@@ -1,0 +1,10 @@
+/**
+ * Created by zhongjx on 2018/11/7.
+ */
+@import "config";
+@mixin b($block) {
+    $B: $namespace + '-' + $block !global;
+    .#{$B} {
+        @content;
+    }
+}

@@ -7,3 +7,4 @@ selenium-debug.log
 .idea/
 .tinypng-sigs
 .ftppass
+dist/

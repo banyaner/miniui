@@ -1,7 +1,17 @@
-@import "common/common.css";
-.mui-button{
-	border: 0;
+@import "common/common";
+@import "common/mixins";
+
+$button-default-color: #606266;
+$button-default-background: #ffffff;
+$border-base: 1px solid #dcdfe6;
+
+@include b(button) {
+	border: $border-base;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	color: $button-default-color;
 	outline: none;
 	-webkit-appearance: none;
-	color: green;
+	background: $button-default-background;
 }
