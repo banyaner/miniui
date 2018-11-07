@@ -25,7 +25,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -35,6 +35,7 @@ const config = {
                     },
                     'css-loader',
                     'postcss-loader',
+                    'sass-loader',
                 ],
             },
         ],

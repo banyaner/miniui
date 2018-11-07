@@ -53,6 +53,5 @@ module.exports = {
             rootValue: 100,
             propBlackList: ['border', 'border-top', 'border-bottom', 'border-left', 'border-right'],
         },
-        'postcss-import': {},
     },
 }

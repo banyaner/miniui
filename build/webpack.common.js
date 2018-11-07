@@ -37,7 +37,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.[p]css$/,
+                test: /\.[p|s]css$/,
                 use: [
                     'style-loader',
                     {
@@ -47,7 +47,8 @@ module.exports = {
                             importLoaders: 1
                         }
                     },
-                    'postcss-loader'
+                    'postcss-loader',
+                    'sass-loader',
                 ],
             },
             {

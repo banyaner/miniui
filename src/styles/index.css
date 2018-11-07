@@ -1,9 +1,0 @@
-@import "common/common.css";
-
-div {
-	color: var(--mainColor);
-	background: greenyellow;
-	p {
-		background: #e8caff;
-	}
-}
