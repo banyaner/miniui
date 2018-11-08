@@ -17,7 +17,6 @@ window.vm = new Vue({
     template: '<App/>',
     data() {
         return {
-            isNewsApp: (/NewsApp/ig).test(navigator.userAgent),
         }
     },
     router,

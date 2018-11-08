@@ -10,30 +10,6 @@
     <meta name="description" content="">
     <meta name="author" content="网易">
     <meta name="copyright" content="网易版权所有">
-    <script>
-        // rem适配
-        !(function () {
-            var designWidth = 750
-            var designHeight = 1206
-            var rem = 100
-
-            function updateHtmlFontSize() {
-                var oHtml = document.getElementsByTagName('html')[0]
-                var width = oHtml.clientWidth
-                var height = oHtml.clientHeight
-                var clientWidth
-                if (width < height) {
-                    clientWidth = width
-                } else {
-                    clientWidth = designWidth / designHeight * height
-                }
-                document.documentElement.style.fontSize = 100 * clientWidth / designWidth + 'px'
-            }
-
-            document.addEventListener('DOMContentLoaded', updateHtmlFontSize, false)
-            window.addEventListener('resize', updateHtmlFontSize, false)
-        })()
-    </script>
 </head>
 <body>
 <div id="app">
