@@ -1,10 +1,69 @@
 /**
  * Created by zhongjx on 2018/11/7.
  */
-@import "config";
+@import "./configs";
+@import "./functions";
+
+
+//BEM
 @mixin b($block) {
     $B: $namespace + '-' + $block !global;
     .#{$B} {
+        @content;
+    }
+}
+
+@mixin e($element) {
+    $E: $element !global;
+    $selector: &;
+    $currentSelector: "";
+    @if hitAllSpecialNestRule($selector) {
+        @at-root {
+            #{$selector} {
+                .#{$B + $element-separator + $E} {
+                    @content;
+                }
+            }
+        }
+    } @else {
+        @at-root {
+            .#{$B + $element-separator + $E} {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin m($modifier) {
+    $selector: &;
+    @at-root {
+        #{$selector + $modifier-separator + $modifier} {
+            @content;
+        }
+    }
+}
+
+@mixin when($state) {
+    @at-root {
+        &.#{$state-prefix + $state} {
+            @content;
+        }
+    }
+}
+
+@mixin pseudo($pseudo) {
+    @at-root #{&}:#{$pseudo} {
+        @content
+    }
+}
+
+@mixin extend-rule($name) {
+    @extend #{'%shared-' + $name};
+}
+
+@mixin share-rule($name) {
+    $rule-name: '%shared-'+$name;
+    @at-root #{$rule-name} {
         @content;
     }
 }
