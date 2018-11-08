@@ -19,6 +19,20 @@ module.exports = merge(common, {
         filename: 'js/[name].[hash].js',
         publicPath: '/',
     },
+    module: {
+        rules: [
+            {
+                test: /\.[p|s]?css$/,
+                use: [
+                    'vue-style-loader',
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+            },
+        ],
+    },
     devServer: {
         overlay: {
             warnings: false,
@@ -89,10 +103,6 @@ module.exports = merge(common, {
             from: 'static',
             to: 'static',
         }]),
-        new MiniCssExtractPlugin({
-            filename: 'css/styles.[hash].css',
-            chunkFilename: "css/[id].css"
-        }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ],

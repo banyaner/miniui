@@ -22,6 +22,24 @@ const config = {
         library: 'mobileui',
         libraryTarget: 'umd',
     },
+    module: {
+        rules: [
+            {
+                test: /\.[p|s]?css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../',
+                        },
+                    },
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+            },
+        ],
+    },
     plugins: [
         new CleanWebpackPlugin(['dist'], {
             root: path.resolve(__dirname, '../'), // root目录
