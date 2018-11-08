@@ -6,12 +6,42 @@ $button-default-background: #ffffff;
 $border-base: 1px solid #dcdfe6;
 
 @include b(button) {
-	border: $border-base;
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-	color: $button-default-color;
-	outline: none;
-	-webkit-appearance: none;
-	background: $button-default-background;
+    border: $border-base;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: $button-default-color;
+    outline: none;
+    -webkit-appearance: none;
+    background: $button-default-background;
+    @include pseudo(hover) {
+        outline: none;
+        text-align: left;
+        @include e(menu) {
+            position: fixed;
+        }
+    }
+    @include e(wrapper) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        @include m(col) {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            @include pseudo(hover) {
+                outline: none;
+                text-align: right;
+            }
+        }
+        @include e(box) {
+            text-align: center;
+        }
+    }
 }

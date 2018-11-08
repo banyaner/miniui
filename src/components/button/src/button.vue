@@ -18,11 +18,3 @@
         },
     }
 </script>
-<style>
-    /*.mui-button{*/
-        /*border: 0;*/
-        /*background: white;*/
-        /*outline: none;*/
-        /*-webkit-appearance: none;*/
-    /*}*/
-</style>

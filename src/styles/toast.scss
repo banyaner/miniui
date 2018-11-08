@@ -1,3 +1,25 @@
 /**
  * Created by zhongjx on 2018/11/8.
  */
+@import "./common/mixins";
+
+@include b(toast) {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    margin-left: -170px;
+    padding: 35px 0;
+    height: 120px;
+    width: 340px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background: black;
+    line-height: 50px;
+    & p{
+        width:100%;
+    }
+}

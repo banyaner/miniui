@@ -1,10 +1,13 @@
 /**
- * Created by zhongjx on 2018/11/6.
+ * Created by zhongjx on 2018/11/8.
  */
-import MuiButton from './src/button'
+import MuiToast from './src/toast'
 
-MuiButton.install = function (Vue) {
-    Vue.component(MuiButton.name, MuiButton)
+MuiToast.install = function (Vue) {
+    Vue.component(MuiToast.name, MuiToast)
+    Vue.prototype.$toast = function ({text}) {
+        
+    }
 }
 
-export default MuiButton
+export default MuiToast
