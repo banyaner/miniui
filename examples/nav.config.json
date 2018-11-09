@@ -8,7 +8,13 @@
     "组件": [
         {
             "name": "toast",
-            "path": "/toast"
+            "path": "/toast",
+            "component": toast,
+        },
+        {
+            "name": "button",
+            "path": "/button",
+            "component": button,
         }
     ]
 }

@@ -93,6 +93,10 @@
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/@csstools/sass-import-resolve/download/@csstools/sass-import-resolve-1.0.0.tgz#32c3cdb2f7af3cd8f0dca357b592e7271f3831b5"
 
+"@types/node@*":
+  version "10.12.3"
+  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-10.12.3.tgz#3918b73ceed484e58367be5acb79d1775239e393"
+
 "@vue/component-compiler-utils@^2.0.0":
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/@vue/component-compiler-utils/download/@vue/component-compiler-utils-2.3.0.tgz#4f580f1b28fc7685859d87ea0e92a1c0271c93da"
@@ -1560,6 +1564,17 @@ cheerio@^0.20.0:
     lodash "^4.1.0"
   optionalDependencies:
     jsdom "^7.0.2"
+
+cheerio@^1.0.0-rc.2:
+  version "1.0.0-rc.2"
+  resolved "http://registry.npm.taobao.org/cheerio/download/cheerio-1.0.0-rc.2.tgz#4b9f53a81b27e4d5dac31c0ffd0cfa03cc6830db"
+  dependencies:
+    css-select "~1.2.0"
+    dom-serializer "~0.1.0"
+    entities "~1.1.1"
+    htmlparser2 "^3.9.1"
+    lodash "^4.15.0"
+    parse5 "^3.0.1"
 
 child_process@^1.0.2:
   version "1.0.2"
@@ -3892,7 +3907,7 @@ he@1.2.x, he@^1.1.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/he/download/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
 
-highlight.js@^9.4.0:
+highlight.js@^9.13.1, highlight.js@^9.4.0:
   version "9.13.1"
   resolved "http://registry.npm.taobao.org/highlight.js/download/highlight.js-9.13.1.tgz#054586d53a6863311168488a0f58d6c505ce641e"
 
@@ -3974,7 +3989,7 @@ html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-htmlparser2@^3.8.2:
+htmlparser2@^3.8.2, htmlparser2@^3.9.1:
   version "3.10.0"
   resolved "http://registry.npm.taobao.org/htmlparser2/download/htmlparser2-3.10.0.tgz#5f5e422dcf6119c0d983ed36260ce9ded0bee464"
   dependencies:
@@ -5070,6 +5085,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+markdown-it-container@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/markdown-it-container/download/markdown-it-container-2.0.0.tgz#0019b43fd02eefece2f1960a2895fba81a404695"
+
 markdown-it@^8.4.0:
   version "8.4.2"
   resolved "http://registry.npm.taobao.org/markdown-it/download/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
@@ -5952,6 +5971,12 @@ parse-passwd@^1.0.0:
 parse5@^1.5.1:
   version "1.5.1"
   resolved "http://registry.npm.taobao.org/parse5/download/parse5-1.5.1.tgz#9b7f3b0de32be78dc2401b17573ccaf0f6f59d94"
+
+parse5@^3.0.1:
+  version "3.0.3"
+  resolved "http://registry.npm.taobao.org/parse5/download/parse5-3.0.3.tgz#042f792ffdd36851551cf4e9e066b3874ab45b5c"
+  dependencies:
+    "@types/node" "*"
 
 parseurl@~1.3.2:
   version "1.3.2"
