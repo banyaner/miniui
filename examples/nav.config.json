@@ -1,20 +1,22 @@
 {
     "首页": [
         {
-            "name": "guide",
-            "path": "/"
+            "title": "index",
+            "path": "/",
+            "name": "index",
+            "type": "view"
         }
     ],
     "组件": [
         {
-            "name": "toast",
+            "title": "Toast组件",
             "path": "/toast",
-            "component": toast,
+            "name": "toast"
         },
         {
-            "name": "button",
+            "title": "Button组件",
             "path": "/button",
-            "component": button,
+            "name": "button"
         }
     ]
 }

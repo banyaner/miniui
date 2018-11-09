@@ -21,7 +21,7 @@
     }
     @media screen and (max-width: 750px) {
         .container-nav{
-            width: 200px;
+            min-width: 200px;
         }
     }
     @media screen and (min-width: 992px) {

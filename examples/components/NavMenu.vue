@@ -1,7 +1,7 @@
 <!--Created by zhongjx on 2018/11/8.-->
 <template>
     <div class="nav">
-        <div  v-for="title in Object.keys(navObj)">
+        <div v-for="title in Object.keys(navObj)">
             <p>{{title}}</p>
             <div>
                 <router-link v-for="sub in navObj[title]" :to="sub.path" :key="sub.path">{{sub.name}}</router-link>
@@ -24,8 +24,10 @@
 </script>
 
 <style>
-.nav{
-    display: flex;
-    flex-direction: column;
-}
+    .nav {
+        padding-right: 40px;
+        a {
+            display: block;
+        }
+    }
 </style>
