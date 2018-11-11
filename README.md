@@ -115,3 +115,72 @@ Modifier是Block或Element上的标记。使用它们来改变样式，行为或
 
 参考：
 https://en.bem.info
+
+# git使用
+
+## 分支管理
+
+![manage-flow](https://static.ws.126.net/163/frontend/newsapp-wxmp/static/git-manage-flow.png)
+
+如图所示：
+master分支只用于存放线上版本
+线上紧急bug，使用hot-fix分支
+开发在dev分支上，小的测试bug也可在dev分支修改。线上紧急修复bug也需合并到dev分支
+开发复杂的新功能可新建分支`dev-${devName}`
+
+
+## Git Commit message 规范
+
+[使用Angular的Commit message 格式](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)。
+
+### commit message 格式
+
+每个commitm message 包括header,body和footer，各占一行，每行不超过100字符。其中header由type、scope和subject组成。**header必须要写**，header的scope是可选的。
+
+
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+### Revert
+
+如果commit用于撤销之前的commit，需以revert:开头，接着写被撤销的commit的header。body里要写：this reverts commit <hash>. ,hash为被撤销的commit的hash值。这种格式也可以由```git revert```命令自动生成。
+
+### Type
+
+必须为下列之一:
+- feat：新功能（feature）
+- fix：修补bug
+- docs：文档修改
+- style： 不影响代码含义的修改(例如：white-space; 格式化等)
+- refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+- perf: 提升性能的修改
+- test：增加或修改测试
+- chore：构建流程或辅助工具的变动
+
+### Scope
+
+scope用于说明commit修改的范围，比如数据层、控制层、视图层,route, component, utils, build等等。如果修改影响多处，可使用"*"。
+
+### Subject
+
+Subject是对修改的简要说明：
+- 使用祈使语气，一般现在时。
+- 首字母小写
+- 句末不要使用句号
+
+### Body
+
+使用祈使语气，一般现在时。另外，body需要包含修改的原因和与之前版本的区别。
+
+### Footer
+
+任何Breaking changes的信息或者关闭issue的信息都可写在Footer.
+Breaking changes需要以**BREAKING CHANGE: **开头。
+
+
+
