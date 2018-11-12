@@ -3,6 +3,7 @@
 $button-default-color: #606266;
 $button-default-background: #ffffff;
 $border-base: 1px solid #dcdfe6;
+$--button-disabled-color: #c0c4cc;
 
 @include b(button) {
     border: $border-base;
@@ -14,34 +15,18 @@ $border-base: 1px solid #dcdfe6;
     outline: none;
     -webkit-appearance: none;
     background: $button-default-background;
-    @include pseudo(hover) {
-        outline: none;
-        text-align: left;
-        @include e(menu) {
-            position: fixed;
-        }
+    @include when(disabled) {
+        color: $--button-disabled-color;
     }
-    @include e(wrapper) {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        @include m(col) {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            @include pseudo(hover) {
-                outline: none;
-                text-align: right;
-            }
-        }
-        @include e(box) {
-            text-align: center;
-        }
+    @include when(loading) {
+        color: $--button-disabled-color;
+    }
+    @include when(circle) {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+    @include pseudo(active) {
+        color: $--button-disabled-color;
     }
 }
