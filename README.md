@@ -182,5 +182,48 @@ Subject是对修改的简要说明：
 任何Breaking changes的信息或者关闭issue的信息都可写在Footer.
 Breaking changes需要以**BREAKING CHANGE: **开头。
 
+## standard version
+
+自动生成CHANGELOG.md。
+
+执行```npm run release```会自动生成CHANGELOG.md，并生成一个commit记录和tag一个新的发布。
+
+### 首次发布
+
+只需运行
+```
+npm run release -- --first-release
+```
+这会生成一个发布tag，但不会在package.json中修改版本。
+
+### 发布一个pre-release
+使用--prerelease来生成预发布：
+假设当前版本是1.0.0，且将要commit的代码为打补丁的修改。运行：
+```
+npm run release -- --prerelease
+```
+将生成版本号1.0.1-0。
+如果想指定预发布版本名字可以通过```--rerelease <name>```。
+例如：
+```
+npm run release -- --prerelease alpha
+ ```
+ 这个tag将是1.0.1-alpha.0
+
+ ### 发布指定的类型
+ 使用--release-as 加参数major或minor或patch可以取消自动生成版本号。
+ 假设当前版本为1.0.0.运行
+ ```
+ //  npm run script
+ npm run release -- --release-as minor
+ //  Or
+ npm run release -- --release-as 1.1.0
+ ```
+ 将生成版本号1.1.0,而不是自动生成的版本号1.0.1
+
+
+
+
+
 
 

@@ -1,7 +1,7 @@
 {
     "name": "MobileUI",
     "projectId": "",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "description": "适用于移动端的vue组件库",
     "author": {
         "name": "bjzhongjingxue",
@@ -12,7 +12,8 @@
     "scripts": {
         "dev": "webpack-dev-server --config build/webpack.dev.js",
         "demo": "webpack --config build/webpack.demo.js",
-        "build": "webpack --config build/webpack.prod.js"
+        "build": "webpack --config build/webpack.prod.js",
+        "release": "standard-version"
     },
     "husky": {
         "hooks": {
@@ -70,6 +71,7 @@
         "postcss-write-svg": "^3.0.1",
         "precss": "^3.1.2",
         "sass-loader": "^7.1.0",
+        "standard-version": "^4.4.0",
         "style-loader": "^0.21.0",
         "uglify-js": "^3.4.0",
         "uglifyjs-webpack-plugin": "^1.2.5",
