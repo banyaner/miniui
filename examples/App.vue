@@ -11,13 +11,17 @@
         components: {
             NavMenu,
         },
-        methods: {},
+        methods: {
+        },
     }
 </script>
 <style>
     .container{
         display: flex;
         width: 100%;
+        .container-main{
+            flex-grow: 1;
+        }
     }
     @media screen and (max-width: 750px) {
         .container-nav{

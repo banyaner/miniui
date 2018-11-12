@@ -3,6 +3,8 @@
  */
 import Vue from 'vue'
 import 'highlight.js/styles/github.css'
+import './css/md.scss'
+
 // import 'inobounce'
 // import 'normalize.css'
 // import MobileUI from '../dist/mobileui'
