@@ -1,8 +1,10 @@
 <!--Created by zhongjx on 2018/11/8.-->
 <template>
-    <div v-show="showToast" :class="{'toast':true, 'fadeInToast':showToast}">
-        <p v-html="msg"></p>
-    </div>
+    <transition name="mui-toast--fade" :duration="duration">
+        <div v-if="showToast" class="mui-toast">
+            <p v-html="msg"></p>
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -12,21 +14,17 @@
             return {
                 showToast: false,
                 msg: '',
+                duration: 3000,
             }
         },
-        created() {
-            window.bus.$on('showToast', (msg) => {
-                this.showToast = true
-                this.msg = msg
-                const that = this
-                setTimeout(() => {
-                    that.showToast = false
-                }, 3000)
-            })
+        mounted() {
+            this.showToast = true
+            if (this.duration <= 0) {
+                this.duration = 3000
+            }
+            setTimeout(() => {
+                this.showToast = false
+            }, this.duration)
         },
     }
 </script>
-
-<style>
-
-</style>

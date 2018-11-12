@@ -4,22 +4,30 @@
 @import "./common/mixins";
 
 @include b(toast) {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    vertical-align: middle;
-    position: absolute;
-    top: 370px;
-    left: 50%;
-    margin-left: -170px;
-    padding: 35px 0;
-    height: 120px;
-    width: 340px;
+    justify-content: center;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -100%);
+    padding: 90px 60px;
     font-size: 30px;
-    text-align: center;
     color: #fff;
-    background: black;
-    line-height: 50px;
-    & p{
-        width:100%;
+    background: rgba(0, 0, 0, 0.7);
+    & p {
+        margin: 0;
+    }
+    @include m(fade-enter-active) {
+        transition: opacity .5s;
+    }
+    @include m(fade-leave-active) {
+        transition: opacity .5s;
+    }
+    @include m(fade-enter) {
+        opacity: 0;
+    }
+    @include m(fade-leave-to) {
+        opacity: 0;
     }
 }

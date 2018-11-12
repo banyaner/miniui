@@ -1,4 +1,3 @@
-@import "common/common";
 @import "common/mixins";
 
 $button-default-color: #606266;
@@ -7,8 +6,9 @@ $border-base: 1px solid #dcdfe6;
 
 @include b(button) {
     border: $border-base;
+    border-radius: 4px;
     margin: 0;
-    padding: 0;
+    padding: 40px;
     line-height: 1;
     color: $button-default-color;
     outline: none;
