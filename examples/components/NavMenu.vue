@@ -1,11 +1,9 @@
 <!--Created by zhongjx on 2018/11/8.-->
 <template>
     <div class="nav">
-        <div v-for="title in Object.keys(navObj)">
+        <div v-for="title in Object.keys(navObj) "class="group-container">
             <p class="nav-title">{{title}}</p>
-            <div class="group-container">
-                <router-link v-for="sub in navObj[title]" :to="sub.path" :key="sub.path">{{sub.name}}</router-link>
-            </div>
+            <router-link v-for="sub in navObj[title]" :to="sub.path" :key="sub.path">{{sub.name}}</router-link>
         </div>
     </div>
 </template>
@@ -25,13 +23,13 @@
 
 <style>
     .nav {
-        padding-right: 100px;
+        padding-right: 20px;
         color: #3F536E;
         .group-container{
-            margin-bottom: 32px;
         }
         .nav-title{
-            padding: 0 24px 8px;
+            margin: 0;
+            padding: 10px 8px;
             color: #8DABC4;
             font-size: 12px;
             font-weight: bold;
@@ -40,7 +38,7 @@
         a{
             display: block;
             position: relative;
-            padding: 8px 24px;
+            padding: 4px 24px;
             color: #444;
             font-weight: normal;
             font-size: 14px;

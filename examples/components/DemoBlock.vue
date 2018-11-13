@@ -31,7 +31,6 @@
 </script>
 
 <style lang="scss" type="text/scss">
-
   .demo-container {
     transition: max-height .3s ease;
     overflow: hidden;

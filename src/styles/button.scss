@@ -9,7 +9,7 @@ $--button-disabled-color: #c0c4cc;
     border: $border-base;
     border-radius: 4px;
     margin: 0;
-    padding: 40px;
+    padding: 6px 4px;
     line-height: 1;
     color: $button-default-color;
     outline: none;
@@ -23,8 +23,8 @@ $--button-disabled-color: #c0c4cc;
     }
     @include when(circle) {
         border-radius: 50%;
-        width: 200px;
-        height: 200px;
+        width: 28px;
+        height: 28px;
     }
     @include pseudo(active) {
         color: $--button-disabled-color;

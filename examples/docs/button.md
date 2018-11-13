@@ -3,12 +3,6 @@
 
 ### 基础用法
 
-<style>
-.demo-block .mui-button{
-    margin:40px;
-}
-</style>
-
 <div class="demo-block">
     <mui-button>默认按钮</mui-button>
     <mui-button :circle="true">圆</mui-button>

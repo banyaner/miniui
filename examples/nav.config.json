@@ -9,14 +9,19 @@
     ],
     "组件": [
         {
+            "title": "Button组件",
+            "path": "/button",
+            "name": "button"
+        },
+        {
             "title": "Toast组件",
             "path": "/toast",
             "name": "toast"
         },
         {
-            "title": "Button组件",
-            "path": "/button",
-            "name": "button"
+            "title": "Modal组件",
+            "path": "/modal",
+            "name": "modal"
         }
     ]
 }
