@@ -76,13 +76,13 @@
 ```
 :::
 
-## Options
+## Instance
+
+MiniUI为全局添加了$toast方法，使用时直接调用`this.$toast(config)`。
+参数config为对象。具体参数说明如下：
+
 
 | 参数      | 说明          | 类型      | 可选值         | 默认值  |
 |---------- |-------------- |---------- |------------- |-------- |
 | msg | 消息文字 | string / VNode | — | — |
 | duration | 显示时间, 毫秒| Number | — | 3000 |
-
-## 方法
-
-MiniUI为全局添加了$toast方法，使用时直接调用`this.$message`。
