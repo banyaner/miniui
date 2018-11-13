@@ -49,9 +49,9 @@ module.exports = {
         'postcss-write-svg': {},
         'postcss-preset-env': {},
         'postcss-sprites': spriteOpts,
-        'postcss-plugin-px2rem': {
-            rootValue: 100,
-            propBlackList: ['border', 'border-top', 'border-bottom', 'border-left', 'border-right'],
-        },
+        // 'postcss-plugin-px2rem': {
+        //     rootValue: 100,
+        //     propBlackList: ['border', 'border-top', 'border-bottom', 'border-left', 'border-right'],
+        // },
     },
 }
