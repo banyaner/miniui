@@ -1,3 +1,52 @@
 /**
  * Created by zhongjx on 2018/11/13.
  */
+@import "./common/mixins";
+
+@include b(modal) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    @include e(container) {
+        position: relative;
+        border-radius: 4px;
+        padding: 10px;
+        min-width: 140px;
+        background: #ffffff;
+    }
+    @include e(button-close) {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+    }
+    @include e(header) {
+        text-align: center;
+        font-weight: bolder;
+    }
+    @include e(body) {
+        padding: 10px 0;
+    }
+    @include e(footer) {
+        text-align: center;
+        font-weight: bolder;
+    }
+    @include m(fade-enter-active) {
+        transition: opacity .5s;
+    }
+    @include m(fade-leave-active) {
+        transition: opacity .5s;
+    }
+    @include m(fade-enter) {
+        opacity: 0;
+    }
+    @include m(fade-leave-to) {
+        opacity: 0;
+    }
+}
