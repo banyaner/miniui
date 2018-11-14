@@ -1,4 +1,5 @@
 # MiniUI
+<img src="https://travis-ci.org/banyaner/miniui.svg?branch=master">
 
 # [规范]css BEM书写规范
 
