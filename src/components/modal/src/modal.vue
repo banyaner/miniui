@@ -10,7 +10,7 @@
                     </slot>
                 </div>
                 <div class="mui-modal__body">
-                    <slot name="body"></slot>
+                    <slot></slot>
                 </div>
                 <slot name="footer">
                     <div class="mui-modal__footer">
