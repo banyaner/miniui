@@ -76,7 +76,6 @@ visible控制Modal的显示和隐藏，支持使用 `.sync` 双向绑定。
 |------|--------|
 | — | Modal 的内容 |
 | header | Modal 标题区 |
-| body | Modal 内容区 |
 | footer | Modal 按钮操作区 |
 
 ## Events

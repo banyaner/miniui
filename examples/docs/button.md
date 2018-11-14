@@ -24,5 +24,10 @@
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | disabled  | 是否禁用状态    | boolean   | —   | false   |
-| cirecle  | 是否为圆形按钮    | boolean   | —   | false   |
+| circle  | 是否为圆形按钮    | boolean   | —   | false   |
 | native-type | 原生 type 属性 | string | button / submit / reset | button |
+
+### Slot
+| name | 说明 |
+|------|--------|
+| — | Button 的内容 |
