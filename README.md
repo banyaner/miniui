@@ -1,5 +1,6 @@
-# MiniUI
-<img src="https://travis-ci.org/banyaner/miniui.svg?branch=master">
+<h1 style="text-align:center">MiniUI</h1>
+
+[![](https://travis-ci.org/banyaner/miniui.svg?branch=master)](https://travis-ci.org/banyaner/miniui.svg?branch=master)
 
 # [规范]css BEM书写规范
 
