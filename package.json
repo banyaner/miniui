@@ -14,7 +14,8 @@
         "demo": "webpack --config build/webpack.demo.js",
         "build": "webpack --config build/webpack.prod.js",
         "release": "standard-version",
-        "test": "jest"
+        "test": "jest",
+        "test:coverage": "npm run test --coverage && cat ./coverage/lcov.info | codecov"
     },
     "husky": {
         "hooks": {
@@ -34,14 +35,16 @@
         "moduleNameMapper": {
             "^@/(.*)$": "<rootDir>/src/$1"
         },
+        "collectCoverage": true,
         "collectCoverageFrom": [
             "**/*.{js,vue}",
-            "!**/node_modules/**"
+            "!**/node_modules/**",
+            "!**/examples/**"
         ],
         "coverageReporters": [
-            "html",
-            "text-summary"
+            "lcov"
         ],
+        "coverageDirectory": "<rootDir>/coverage/",
         "snapshotSerializers": [
             "jest-serializer-vue"
         ]
@@ -70,6 +73,7 @@
         "cheerio": "^1.0.0-rc.2",
         "child_process": "^1.0.2",
         "clean-webpack-plugin": "^0.1.19",
+        "codecov": "^3.1.0",
         "copy-webpack-plugin": "^4.5.1",
         "css-loader": "^0.28.11",
         "easeftp": "^2.0.39",
