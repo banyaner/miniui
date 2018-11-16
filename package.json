@@ -37,9 +37,7 @@
         },
         "collectCoverage": true,
         "collectCoverageFrom": [
-            "**/*.{js,vue}",
-            "!**/node_modules/**",
-            "!**/examples/**"
+            "<rootDir>/src/**/*.{js,vue}"
         ],
         "coverageReporters": [
             "lcov"
