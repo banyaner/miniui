@@ -1,7 +1,7 @@
 /**
  * Created by zhongjx on 2018/11/15.
  */
-import { shallowMount, mount} from '@vue/test-utils'
+import { shallowMount, mount } from '@vue/test-utils'
 import Modal from '@/components/modal'
 import MuiButton from '@/components/button'
 
@@ -34,6 +34,18 @@ describe('Modal', () => {
         })
         wrapper.find('.mui-modal__footer>button:nth-child(2)').trigger('click')
         expect(wrapper.emitted().cancel).toBeTruthy()
+    })
+    test('允许蒙层触发触点击关闭事件', () => {
+        const wrapper = shallowMount(Modal, {
+            propsData: {
+                maskClosable: true,
+            },
+            stubs: {
+                MuiButton,
+            }
+        })
+        wrapper.find('.mui-modal').trigger('click')
+        expect(wrapper.emitted()['update:visible']).toBeTruthy()
     })
     test('slot default正确渲染', () => {
         const wrapper = shallowMount(Modal, {
