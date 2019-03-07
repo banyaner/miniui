@@ -22,6 +22,11 @@
             "title": "Modal组件",
             "path": "/modal",
             "name": "modal"
+        },
+        {
+            "title": "Switch组件",
+            "path": "/switch",
+            "name": "switch"
         }
     ]
 }
