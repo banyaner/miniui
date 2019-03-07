@@ -4,12 +4,14 @@
 import MuiButton from './components/button/index'
 import MuiToast from './components/toast/index'
 import MuiModal from './components/modal/index'
+import MuiSwitch from './components/switch/index'
 import './styles/index'
 
 const components = {
     MuiButton,
     MuiToast,
     MuiModal,
+    MuiSwitch,
 }
 const install = (Vue) => {
     if (install.installed) return

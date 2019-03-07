@@ -1,0 +1,38 @@
+/**
+ * Created by zhongjx on 2018/11/8.
+ */
+@import "./common/mixins";
+$_width: 60px;
+$_height: 24px;
+
+@include b(switch) {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $_height;
+    padding:1px;
+    width: $_width;
+    height: $_height;
+    background: red;
+    @include pseudo(after) {
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        border-radius: 100%;
+        transition: all .3s;
+        width: $_height;
+        height: $_height;
+        background: #fff;
+    }
+    @include m(checked) {
+        background: green;
+        @include pseudo(after) {
+            left: $_width - $_height;
+        }
+    }
+    @include m(disabled) {
+        background: #dcdfe6;
+    }
+}
